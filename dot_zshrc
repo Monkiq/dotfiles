@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # where should we download your Zsh plugins?
 #ZPLUGINDIR=$ZDOTDIR/plugins
 
@@ -25,8 +32,9 @@ function plugin-load {
 
 # make a github repo plugins list
 plugins=(
-  sindresorhus/pure
-  mattmc3/zman
+#  sindresorhus/pure
+	romkatv/powerlevel10k
+	mattmc3/zman
   rupa/z
   rummik/zsh-tailf
   peterhurford/up.zsh
@@ -37,6 +45,8 @@ plugins=(
   romkatv/zsh-defer
   olets/zsh-abbr
   zdharma-continuum/fast-syntax-highlighting
+  Aloxaf/fzf-tab
+  joshskidmore/zsh-fzf-history-search
 )
 plugin-load $plugins
 
@@ -60,3 +70,13 @@ fi
 if [ -f "${HOME}/.g/env" ]; then
     . "${HOME}/.g/env"
 fi
+
+# alias 
+alias vim=nvim
+# alias ls="ls --color"
+alias ls="exa"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
