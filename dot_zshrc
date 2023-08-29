@@ -51,22 +51,20 @@ plugin-load $plugins
 
 
 if [ "$(uname)" = "Darwin" ]; then
-export PATH="/Users/monkiq/go/bin:$PATH"
-export PATH="/opt/homebrew/opt/go@1.19/bin:$PATH"
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-if [ -d "${HOME}/.nvm" ]; then
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-fi 
-
+      export PATH="/Users/monkiq/go/bin:$PATH"
+      export PATH="/opt/homebrew/opt/go@1.19/bin:$PATH"
+      test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+  if [ -d "${HOME}/.nvm" ]; then
+      export NVM_DIR="$HOME/.nvm"
+      [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+      [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+  fi
 elif [ "$(uname)"="Linux" ]; then
-export GOPATH=~/go
-export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
+      export GOPATH=~/go
+      export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
 fi
 
 eval $(thefuck --alias)
-
 
 # g shell setup
 if [ -f "${HOME}/.g/env" ]; then
@@ -74,11 +72,13 @@ if [ -f "${HOME}/.g/env" ]; then
 fi
 
 # alias 
-alias vim=nvim
-# alias ls="ls --color"
-alias ls="exa"
+if command -v nvim > /dev/null 2>&1 ; then
+    alias vim=nvim
+fi
+if command -v exa > /dev/null 2>&1 ; then
+    alias ls=exa
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
