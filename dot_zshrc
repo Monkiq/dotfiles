@@ -5,9 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# where should we download your Zsh plugins?
-#ZPLUGINDIR=$ZDOTDIR/plugins
-
+SAVEHIST=2000  # Save most-recent 1000 lines
+HISTFILE=~/.zsh_history
 ##? Clone a plugin, identify its init file, source it, and add it to your fpath.
 function plugin-load {
   local repo plugdir initfile initfiles=()
@@ -55,17 +54,20 @@ if [ "$(uname)" = "Darwin" ]; then
 export PATH="/Users/monkiq/go/bin:$PATH"
 export PATH="/opt/homebrew/opt/go@1.19/bin:$PATH"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-elif [ "$(uname)"="Linux" ]; then
-
-fi
-
-eval $(thefuck --alias)
-
 if [ -d "${HOME}/.nvm" ]; then
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 fi 
+
+elif [ "$(uname)"="Linux" ]; then
+export GOPATH=~/go
+export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
+fi
+
+eval $(thefuck --alias)
+
+
 # g shell setup
 if [ -f "${HOME}/.g/env" ]; then
     . "${HOME}/.g/env"
