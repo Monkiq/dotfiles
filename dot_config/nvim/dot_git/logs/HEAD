@@ -16,3 +16,5 @@ cc2fd6a89857cbc11e4f7db6a14617e0e41832ff 2daa5db1b6e7ad99c23b10f46133b0803be86b0
 e63d6c82c55d1fb3fa14fab2c6f45a331b4cc663 45ff7b29197ba186df70449ac271e81e869add93 monkiqchen <monkiqchen@tencent.com> 1693207121 +0800	commit: numToStr配置 使用lazy
 45ff7b29197ba186df70449ac271e81e869add93 45ff7b29197ba186df70449ac271e81e869add93 monkiqchen <monkiqchen@tencent.com> 1693208255 +0800	checkout: moving from numToStr to LazyVim
 45ff7b29197ba186df70449ac271e81e869add93 e400c4ed42c7eff22d48c3c1149f2a3fa8c84a6b monkiqchen <monkiqchen@tencent.com> 1693216904 +0800	commit: 添加Lazyvim配置
+e400c4ed42c7eff22d48c3c1149f2a3fa8c84a6b 77c8f5043011a823f07f467095167f534a622ef9 monkiqchen <monkiqchen@tencent.com> 1693447184 +0800	commit: 添加colorscheme.lua
+77c8f5043011a823f07f467095167f534a622ef9 e68efbed3c857ff1e54620843ec1250d5a2e2161 monkiqchen <monkiqchen@tencent.com> 1693447217 +0800	commit: 添加neo-tree.lua和noice.lua
