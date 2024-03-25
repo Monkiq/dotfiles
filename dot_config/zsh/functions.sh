@@ -41,10 +41,6 @@ function w() {
 
 # Creates new Zellij session or attaches to existing one
 # based on the current directory name
-function s() {
-	dir=$(basename "$(pwd)")
-	zellij attach --create "$dir"
-}
 
 # Creates a new directory and enters it
 function mkd() {
