@@ -3,14 +3,10 @@ if [ "$(uname)" = "Darwin" ]; then
 elif [ "$(uname)"="Linux" ]; then
 fi
 
-if command -v nvim >/dev/null 2>&1; then
-	alias vim=nvim
-fi
-if command -v lsd >/dev/null 2>&1; then
-	alias ls=lsd
-fi
-if command -v zoxide >/dev/null 2>&1; then
-	eval "$(zoxide init zsh)"
-fi
+command -v nvim >/dev/null && alias vim=nvim
+
+command -v lsd >/dev/null && alias ls=lsd
+
+command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
 
 alias kk=kubectl
