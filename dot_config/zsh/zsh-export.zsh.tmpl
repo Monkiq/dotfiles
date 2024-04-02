@@ -1,0 +1,19 @@
+{{ template "data.tmpl" . }}
+
+
+#判断主机类型
+{{ if eq .osid "darwin" }}
+#macos
+
+
+
+{{ else if eq .osid "linux-debian" }}
+#linux-debian
+
+
+
+
+{{ else }}
+
+
+{{end}}
