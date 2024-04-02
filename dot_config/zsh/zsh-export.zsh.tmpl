@@ -5,6 +5,7 @@
 {{   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id }}
 {{ end }}
 
+
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -19,6 +20,7 @@ export PATH="$HOME/go/bin:$PATH"
 # 判断主机类型
 {{ if eq $osid "darwin" }}
 # macos
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
 {{ else if eq $osid "linux-debian" }}
 # debian
@@ -29,3 +31,6 @@ export PATH=$PATH:$HOME/vcpkg
 export vcpkgRoot=$HOME/vcpkg
 
 {{ end }}
+
+
+eval "$(atuin init zsh)"
