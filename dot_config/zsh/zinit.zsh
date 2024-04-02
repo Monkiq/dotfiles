@@ -11,6 +11,7 @@ autoload -Uz _zinit
   # zinit ice pick"async.zsh" src"pure.zsh"
   # zinit light sindresorhus/pure
 
+  zinit light Aloxaf/fzf-tab
   zinit light mattmc3/zman
 
   # zinit ice wait lucid atload'_zsh_autosuggest_start'
@@ -23,4 +24,3 @@ autoload -Uz _zinit
 
   # load these at hypersonic load speeds with zsh-defer
   zinit light zdharma-continuum/fast-syntax-highlighting
-  zinit light Aloxaf/fzf-tab

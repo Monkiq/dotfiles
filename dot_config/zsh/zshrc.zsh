@@ -10,18 +10,17 @@ autoload -Uz colors && colors  # provide color variables (see `which colors`)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source ~/.config/zsh/aliases.sh
 source ~/.config/zsh/functions.sh
-source ~/.config/zsh/config/p10k-robbyrussell.zsh
+source ~/.config/zsh/p10kconfig/p10k-rainbow.zsh
 
 eval "$(atuin init zsh)"
 
 export EDITOR='nvim'
 export VISUAL='nvim'
 
-source ~/.config/zsh/export.zsh
+source ~/.config/zsh/zsh-export.zsh
 
 # eval $(thefuck --alias)
 # g shell setup
