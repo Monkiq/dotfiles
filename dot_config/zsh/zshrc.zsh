@@ -11,8 +11,8 @@ autoload -Uz colors && colors  # provide color variables (see `which colors`)
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-source ~/.config/zsh/aliases.sh
 source ~/.config/zsh/functions.sh
+source ~/.config/zsh/aliases.sh
 source ~/.config/zsh/p10kconfig/p10k-rainbow.zsh
 
 eval "$(atuin init zsh)"

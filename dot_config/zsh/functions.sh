@@ -87,3 +87,7 @@ function colortest() {
 	done
 	echo
 }
+
+function existDo() {
+	command -v $1 >/dev/null && eval "$2"
+}
