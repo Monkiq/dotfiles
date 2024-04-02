@@ -23,4 +23,4 @@ autoload -Uz _zinit
 
   # load these at hypersonic load speeds with zsh-defer
   zinit light zdharma-continuum/fast-syntax-highlighting
-
+  zinit light Aloxaf/fzf-tab
