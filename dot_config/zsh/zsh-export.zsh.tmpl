@@ -33,5 +33,4 @@ export vcpkgRoot=$HOME/vcpkg
 {{ end }}
 
 
-if command -v eval >/dev/null 2>&1; then
-eval "$(atuin init zsh)"
+ command -v eval > /dev/null  && eval "$(atuin init zsh)"
