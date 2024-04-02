@@ -5,8 +5,6 @@
 {{   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id }}
 {{ end }}
 
-
-# 公共导入
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -23,11 +21,11 @@ export PATH="$HOME/go/bin:$PATH"
 # macos
 
 {{ else if eq $osid "linux-debian" }}
-# linux-debian
+# debian
+
+{{ else if eq $osid "linux-centos"}}
+# centos
 export PATH=$PATH:$HOME/vcpkg
 export vcpkgRoot=$HOME/vcpkg
-
-{{ else }}
-
 
 {{ end }}
