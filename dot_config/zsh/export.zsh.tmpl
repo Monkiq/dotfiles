@@ -1,0 +1,15 @@
+# 获取主机类型
+{{ $osid := .chezmoi.os }}
+{{ if hasKey .chezmoi.osRelease "id" }}
+{{   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id }}
+{{ end }}
+
+
+#判断主机类型
+{{ if eq $osid "darwin" }}
+#macos
+{{ else if eq $osid "linux-debian" }}
+#linux-debian
+{{ else }}
+#none
+{{end}}
