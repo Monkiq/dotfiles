@@ -21,6 +21,7 @@ eval "$(atuin init zsh)"
 export EDITOR='nvim'
 export VISUAL='nvim'
 
+source ~/.config/zsh/export.zsh
 
 if [ "$(uname)" = "Darwin" ]; then
       test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
