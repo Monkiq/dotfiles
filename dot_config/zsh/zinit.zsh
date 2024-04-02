@@ -15,7 +15,7 @@ autoload -Uz _zinit
 
   # zinit ice wait lucid atload'_zsh_autosuggest_start'
   zinit light zsh-users/zsh-autosuggestions
-  # zinit light zsh-users/zsh-history-substring-search
+  zinit light zsh-users/zsh-history-substring-search
 
   zinit snippet OMZ::/plugins/magic-enter
   zinit snippet OMZ::/plugins/sudo
