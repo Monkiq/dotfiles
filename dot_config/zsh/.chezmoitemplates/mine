@@ -4,4 +4,4 @@
 {{   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id }}
 {{ end }}
 
-
+$osid := {{$osid}}

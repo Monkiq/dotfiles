@@ -2,12 +2,12 @@
 
 
 #判断主机类型
-{{ if eq .osid "darwin" }}
+{{ if eq $osid "darwin" }}
 #macos
 
 
 
-{{ else if eq .osid "linux-debian" }}
+{{ else if eq $osid "linux-debian" }}
 #linux-debian
 
 
