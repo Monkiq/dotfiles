@@ -5,31 +5,33 @@
 {{   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id }}
 {{ end }}
 
-
+######################### common 
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
-
 # nodejs
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-# go 
+# go
+source "$HOME/.g/env"
 export PATH="$HOME/go/bin:$PATH"
-
 
 # 判断主机类型
 {{ if eq $osid "darwin" }}
-# macos
+###################### macos
+# llvm
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+# cmds history
+eval "$(atuin init zsh)"
+# fuck cmds
+eval $(thefuck --alias)
+# llvm
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
 {{ else if eq $osid "linux-debian" }}
-# debian
-
+############################# debian
 {{ else if eq $osid "linux-centos"}}
-# centos
+############################# centos
 export PATH=$PATH:$HOME/vcpkg
-export vcpkgRoot=$HOME/vcpkg
-
 {{ end }}
 
 
