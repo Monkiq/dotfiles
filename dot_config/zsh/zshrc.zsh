@@ -22,8 +22,8 @@ export VISUAL='nvim'
 
 source ~/.config/zsh/zsh-export.zsh
 
-# eval $(thefuck --alias)
-# g shell setup
+eval $(thefuck --alias)
+g shell setup
 
 
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
