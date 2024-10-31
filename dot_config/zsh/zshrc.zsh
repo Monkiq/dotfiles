@@ -13,6 +13,7 @@ autoload -Uz colors && colors  # provide color variables (see `which colors`)
 
 source ~/.config/zsh/functions.sh
 source ~/.config/zsh/aliases.sh
+source ~/.config/zsh/zsh-export.zsh
 source ~/.config/zsh/p10kconfig/p10k-rainbow.zsh
 
 eval "$(atuin init zsh)"
@@ -20,7 +21,6 @@ eval "$(atuin init zsh)"
 export EDITOR='nvim'
 export VISUAL='nvim'
 
-source ~/.config/zsh/zsh-export.zsh
 
 eval $(thefuck --alias)
 g shell setup
