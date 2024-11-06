@@ -4,8 +4,8 @@ input_delay                     1
 sync_to_monitor                 no
 
 # Font settings
-font_family                     FiraCode-Retina 
-font_features                   FiraCode-Retina +cv02 +cv05 +cv09 +cv14 +ss04 +cv16 +cv31 +cv25 +cv26 +cv32 +cv28 +ss10 +zero +onum
+font_family                     FiraCode-Retina
+font_features                   FiraCode-Retina +cv04 +cv10 +ss04 +ss03 +cv25 +cv32 +cv28 +ss06 +ss07
 bold_font                       FiraCode-Bold
 italic_font                     auto
 bold_italic_font                auto
@@ -23,7 +23,7 @@ cursor_blink_interval           0
 
 # Window layout
 window_border_width             1px
-hide_window_decorations         yes
+hide_window_decorations         no
 
 # Bell
 enable_audio_bell               no
@@ -41,11 +41,52 @@ bell_on_tab                     no
 shell_integration               enabled no-cursor
 update_check_interval           0
 
-tab_bar_min_tabs            1
-tab_bar_edge                bottom
-tab_bar_style               powerline
-tab_powerline_style         slanted
-tab_title_template          {title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}
+# Nord Colorscheme for Kitty
+# Based on:
+# - https://gist.github.com/marcusramberg/64010234c95a93d953e8c79fdaf94192
+# - https://github.com/arcticicestudio/nord-hyper
+# foreground              #e0def4
+# background              #12121e
+# selection_foreground    #12121e
+# selection_background    #FFFACD
+# url_color               #9ccfd8
+# cursor                  #cccccc
+
+# black
+# color0   #3B4252
+# color8   #4C566A
+
+# red
+# color1   #FF789E
+# color9   #FF789E
+
+# green
+# color2   #A3BE8C
+# color10  #A3BE8C
+
+# yellow
+# color3   #f6c177
+# color11  #f6c177
+
+# blue
+# color4  #81A1C1
+# color12 #81A1C1
+
+# magenta
+# color5   #c4a7e7
+# color13  #c4a7e7
+
+# cyan
+# color6   #9ccfd8
+# color14  #8FBCBB
+
+# white
+# color7   #E5E9F0
+# color15  #ECEFF4
+
+# Windows
+# active_border_color     #f6c177
+# inactive_border_color   #12121e
 
 # Tabs
 # active_tab_foreground   #12121e
@@ -103,6 +144,6 @@ inactive_tab_font_style normal
 
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Macchiato
+# Catppuccin-Mocha
 include current-theme.conf
 # END_KITTY_THEME
