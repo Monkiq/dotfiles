@@ -1,0 +1,25 @@
+matches:
+  # Dev
+  - trigger: ":dev"
+    replace: "9.135.12.153"
+  # TCE
+  - trigger: ":db1"
+    replace: "CloudAlarmV2"
+  - trigger: ":db2"
+    replace: "StormCloudConf"
+  - trigger: ":mysql22001"
+    replace: "mysql22001 {{db1}}"
+    vars:
+      - name: db1
+        type: match
+        params:
+          trigger: :db1
+  - trigger: ":mysql22002"
+    replace: 'mysql22002 {{db2}}'  
+    vars:
+      - name: db2
+        type: match
+        params:
+          trigger: :db2
+
+
