@@ -1,8 +1,7 @@
 export ZSH=$HOME/.config/zsh
-# 加载zinit插件
-source $ZSH/zinit.zsh
-# zsh 自动补全功能
-autoload -Uz compinit && compinit
+
+# 加载zim插件,自带补全，不需要启动zsh的compinit
+source $ZSH/zim.zsh
 # zsh 颜色功能
 autoload -Uz colors && colors  # provide color variables (see `which colors`)
 
